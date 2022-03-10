@@ -16,6 +16,7 @@ const ChooseCar = () => {
         <p className=" h1 text-center mt-4 mb-4"> Hola {nombre} </p>
         <p className="h3 text-center mb-4"> Escoge tu vehículo </p>
 
+<<<<<<< HEAD
         {/*  style="max-width: 540px" */}
         
         <div className="card mb-3">
@@ -31,6 +32,19 @@ const ChooseCar = () => {
               <div className="card-body">
                 {
                 
+=======
+      <h1 className="text-center mt-4 mb-4"> Hola {nombre}, escoge tu vehículo </h1>
+      
+      {/*  style="max-width: 540px" */}
+      <div className="card mb-3">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img src={car}className="img-fluid rounded-start mt-4 ms-4" alt="..." />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              {
+>>>>>>> 9d136b61f869f790a4d32ed52b2b8ba73f1e56dd
                 [auto.auto1].map((item, id) => (
                   <button
                   key={id}
@@ -47,6 +61,7 @@ const ChooseCar = () => {
 
                 {
                 [poliza.poliza1].map((item, id) => (
+<<<<<<< HEAD
                    <button
                    key={id}
                    onClick={() => {
@@ -65,6 +80,13 @@ const ChooseCar = () => {
                    </button>
                    
                 ))}
+=======
+                  <div key={id}>
+                  <p className="card-text" > Poliza: {item.codigo} Vigencia: {item.vigencia} </p>
+                  <p className="card-text">
+                <small className="text-muted state-payment">{item.estado}</small>
+              </p>
+>>>>>>> 9d136b61f869f790a4d32ed52b2b8ba73f1e56dd
               </div>
             </div>
           </div>

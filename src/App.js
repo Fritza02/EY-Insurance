@@ -11,6 +11,7 @@ import SelectDate from './components/SelectDate';
 import NewCar from './components/NewCar';
 import PassEvent from './components/PassEvent';
 import SendEvent from './components/SendEvent';
+import Sinister from './components/Sinister';
 
 
 const App = () => {
@@ -29,7 +30,8 @@ const App = () => {
       <Route path="/newcar" element={<NewCar/>}/>
       <Route path="/passevent" element={<PassEvent/>}/>
       <Route path="/sendevent" element={<SendEvent/>}/>
-
+      <Route path="/sinister" element={<Sinister/>}/>
+      <Route path="/selectdate" element={<SelectDate/>}/>
     </Routes>
 </>
 

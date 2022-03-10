@@ -26,7 +26,9 @@ const LoginProvider = (props) => {
   const [error, setError] = React.useState("");
   const [esRegistro, setEsRegistro] = React.useState(false);
   const [uidData, setUid] = React.useState("");
+
   const [message, setMessage] = React.useState("");
+
 
   //const history = useHistory()
   let navigate = useNavigate();

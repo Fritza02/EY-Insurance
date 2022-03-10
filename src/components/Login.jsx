@@ -5,6 +5,7 @@ import "../styles/login.css";
 import white_logo from "../images/white_logo.png";
 
 const Login = () => {
+
   const {
     email,
     setError,
@@ -16,27 +17,28 @@ const Login = () => {
     message,
   } = React.useContext(LoginContext);
 
-  const loginCount = (e) => {
-    e.preventDefault();
-    if (!email.trim() || !password.trim()) {
-      console.log("Debe ingresar el email");
-      setError("Debe ingresar el email");
-      return;
-    }
-    if (!password.trim()) {
-      console.log("Datos vacíos pass!");
-      setError("Datos vacíos pass!");
-      return;
-    }
-    if (password.length < 6) {
-      console.log("6 o más carácteres");
-      setError("La contraseña debe tener como mínimo 6 caracteres");
-      return;
-    }
-    // console.log("Registro exitoso");
-    setError(null);
-    userLogin(email, password);
-  };
+
+    const loginCount = (e) => {
+        e.preventDefault();
+        if (!email.trim() || !password.trim()) {
+        console.log("Debe ingresar el email");
+        setError("Debe ingresar el email");
+        return;
+        }
+        if (!password.trim()) {
+        console.log("Datos vacíos pass!");
+        setError("Datos vacíos pass!");
+        return;
+        }
+        if (password.length < 6) {
+        console.log("6 o más carácteres");
+        setError("La contraseña debe tener como mínimo 6 caracteres");
+        return;
+        }
+        // console.log("Registro exitoso");
+        setError(null);
+        userLogin(email, password);
+    };
 
   return (
     <section className="login-container">

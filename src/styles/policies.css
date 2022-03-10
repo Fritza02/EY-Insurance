@@ -1,4 +1,5 @@
 .policies-container {
+   
     background-color: #F6F6FA;
     height: 100vh;
 }
@@ -9,10 +10,41 @@
     margin-top: 10vh;
 }
 
+.card-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 5vh;
+}
+
 .policy-box {
+  display: flex;
   height: 45vh;
+  justify-content: center;
+  width: 85vw;
 
 }
+
+.policy-card {
+    display: flex;
+    border-radius: 20px;
+}
+
+.policy-info {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.car-image, .car-info{
+display: flex;
+}
+
+.policy-info {
+   color: #2E2E38;
+   font-family: 'Roboto', sans-serif;
+}
+
 .assistance-box{   
         display: flex;
         flex-direction: column;
