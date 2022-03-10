@@ -1,0 +1,48 @@
+.sinister-container {
+        background-color: #F6F6FA;
+        height: 100vh;
+    
+}
+
+.sinister-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    color: #2E2E38;
+}
+
+.sinister-buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 5vh;
+    
+}
+
+.sinister-btn {
+    background-color: #ffe600;
+    color: #2E2E38;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: none;
+    width: 270px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5vh;
+}
+
+.continue-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+  
+}
+
+.next-btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width:60vw;
+    height: 8vh;
+  
+}

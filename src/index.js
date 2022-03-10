@@ -7,23 +7,28 @@ import { BrowserRouter } from 'react-router-dom';
 import LoginProvider from "./context/LoginProvider"
 import DataProvider from './context/DataProvider';
 import UserDataProvider from './context/UserDataProvider';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import esLocale from 'date-fns/locale/es';
 
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <React.StrictMode> 
-    <LoginProvider>
-      <DataProvider>
-        <UserDataProvider>
-      <App/>
-      </UserDataProvider>
-      </DataProvider>
-    </LoginProvider>
+    <React.StrictMode>
+      <LoginProvider>
+        <DataProvider>
+          <UserDataProvider>
+            <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+              <App />
+            </MuiPickersUtilsProvider>
+          </UserDataProvider>
+        </DataProvider>
+      </LoginProvider>
 
     </React.StrictMode>
   </BrowserRouter>,
-      document.getElementById('root')
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
