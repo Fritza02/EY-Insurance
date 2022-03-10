@@ -67,7 +67,12 @@ const ChooseCar = () => {
           </div>
         </div>
       </div>
-     <Link to = {"/sinister"}> <button type="button" class="btn btn-primary btn-lg" /* onClick={} */> Siguiente </button></Link>
+     
+      <div className="continue-btn">
+          <Link to = "/sinister">
+          <button type="button" class="btn btn-dark next-btn">Siguiente</button>
+          </Link>
+          </div>
     </section>
   );
 };
