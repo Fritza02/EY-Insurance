@@ -26,7 +26,6 @@ const App = () => {
       <Route path="/photo" element={<UpDocuments />} />
       <Route path="/selectcar" element={<ChooseCar/>}/>
       <Route path="/describe" element={<DescribeSinister/>}/>
-      <Route path="/selectdate" element={<SelectDate/>}/>
       <Route path="/newcar" element={<NewCar/>}/>
       <Route path="/passevent" element={<PassEvent/>}/>
       <Route path="/sendevent" element={<SendEvent/>}/>

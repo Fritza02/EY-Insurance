@@ -1,12 +1,18 @@
 import React from "react";
 import "../styles/sinister.css";
 import HeaderBack from "./HeaderBack";
+import { userContext } from "../context/UserDataProvider";
 
 
 const Sinister = () => {
 
+  const {setTypeSinister, agregarFire} =  React.useContext(userContext);
+
     const saveValue = (e) => {
-        console.log(e.target.value); 
+      const choose = (e.target.value)
+      console.log(choose)
+      setTypeSinister(choose); 
+      
        
    }
 
@@ -37,7 +43,7 @@ const Sinister = () => {
            
           </div>
           <div className="continue-btn">
-          <button type="button" class="btn btn-primary next-btn">Basic</button>
+          <button type="button" class="btn btn-primary next-btn" onClick={agregarFire}>Basic</button>
           </div>
         </div>
       </div>

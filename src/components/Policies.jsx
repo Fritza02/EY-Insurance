@@ -5,7 +5,7 @@ import HeaderHome from './HeaderHome.jsx'
 import '../styles/policies.css';
 
 const Policies = () => {
-    const { nombre, auto, poliza } = React.useContext(userContext);
+    const {  auto, poliza } = React.useContext(userContext);
 
     return (
         <section className="policies-container">
