@@ -7,12 +7,11 @@ import Policies from './components/Policies';
 import UpDocuments from './components/UpDocuments';
 import ChooseCar from './components/ChooseCar';
 import DescribeSinister from './components/DescribeSinister'
+import Sinister from './components/Sinister';
 import SelectDate from './components/SelectDate';
 import NewCar from './components/NewCar';
 import PassEvent from './components/PassEvent';
 import SendEvent from './components/SendEvent';
-import Sinister from './components/Sinister';
-
 
 const App = () => {
   return (
@@ -26,14 +25,16 @@ const App = () => {
       <Route path="/photo" element={<UpDocuments />} />
       <Route path="/selectcar" element={<ChooseCar/>}/>
       <Route path="/describe" element={<DescribeSinister/>}/>
+      <Route path="/sinister" element={<Sinister/>}/>
+      <Route path="/selectdate" element={<SelectDate/>}/>
       <Route path="/newcar" element={<NewCar/>}/>
       <Route path="/passevent" element={<PassEvent/>}/>
       <Route path="/sendevent" element={<SendEvent/>}/>
-      <Route path="/sinister" element={<Sinister/>}/>
-      <Route path="/selectdate" element={<SelectDate/>}/>
     </Routes>
 </>
 
   );
 }
 export default App;
+
+// hola

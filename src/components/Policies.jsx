@@ -33,7 +33,7 @@ const Policies = () => {
                                         <div className= "policy-info" key={id}>
                                             <p className="card-text policy" > Póliza: {item.codigo} Vigencia: {item.vigencia} </p>
                                             <p className="card-text payment">
-                                                <small className="text-muted">{item.estado}</small>
+                                                <p className="text-success h3">{item.estado}</p>
                                             </p>
                                         </div>
                                         

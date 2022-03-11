@@ -5,27 +5,30 @@ import HeaderHome from "./HeaderHome.jsx";
 import { userContext } from "../context/UserDataProvider";
 
 const Events = () => {
-  const { autoSinister, events } = React.useContext(userContext);
-  console.log(autoSinister);
+  const { events } = React.useContext(userContext);
+  
 
   return (
     <section className="events">
       <HeaderHome />
-      <div className="containerEvents">
-        <h1>Mis Eventos</h1>
-        <div>
+      <h1 className="text-center mt-4">Mis Eventos</h1>
+      <div className=" containerEvents mt-3 card-body ">
+        
+       
           {events.map((item, id) => (
-            <div key={id}>
+            <div className=" car-event mt-2 ms-4 border p-2 rounded border-dark  " key={id}>
               {[item.auto].map((ele, id) => (
-                <h1 key={id}>
+                <h2 key={id}>
                   {ele.marca} - {ele.patente} - {ele.modelo}
-                </h1>
+                </h2>
               ))}
-              {item.tipo} - {item.fecha} - Numero de orden {item.id} -{" "}
-              {item.estado}
+              <p className="h3"> {item.tipo} </p>
+             {/*  Fecha de ingreso: {item.fecha}  */}
+              <p>Numero de orden: {item.id} </p>
+              <p className= "text-success h4">{item.estado}</p>
             </div>
           ))}
-        </div>
+       
       </div>
     </section>
   );

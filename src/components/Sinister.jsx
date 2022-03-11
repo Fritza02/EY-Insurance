@@ -1,24 +1,29 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "../styles/sinister.css";
 import HeaderBack from "./HeaderBack";
 import { userContext } from "../context/UserDataProvider";
 
+import back from '../images/back.png';
 
 const Sinister = () => {
 
-  const {setTypeSinister, agregarFire} =  React.useContext(userContext);
+  const {setTypeSinister} =  React.useContext(userContext);
 
     const saveValue = (e) => {
       const choose = (e.target.value)
       console.log(choose)
       setTypeSinister(choose); 
-      
-       
    }
 
   return (
     <section className="sinister-container">
       <HeaderBack />
+      <div className="back-icon">
+     <Link to ={"/selectcar"}>
+     <img className= "back" src={back} alt="Home icon" />
+     </Link>
+     </div>
       <div className="containerHome">
         <div className="orderColumn">
           <div className="sinister-title">    
@@ -43,7 +48,9 @@ const Sinister = () => {
            
           </div>
           <div className="continue-btn">
-          <button type="button" class="btn btn-primary next-btn" onClick={agregarFire}>Basic</button>
+          <Link to = "/selectdate">
+          <button type="button" class="btn btn-dark next-btn">Siguiente</button>
+          </Link>
           </div>
         </div>
       </div>
