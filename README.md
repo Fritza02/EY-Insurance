@@ -37,5 +37,11 @@ Visualizamos también ciertas oportunidades de mejora en nuestra app, principalm
 
 ¡IMPORTANTE! Para ingresar a la página debe utilizar el siguiente correo y contraseña 
 
+Usuario 1
 * correo: atolosab@gmail.com
 * contraseña: ejemplo01
+
+Usuario 2
+* correo: jpereztudela@gmail.com
+* contraseña: Ejemplo02
+
