@@ -6,9 +6,11 @@ import HeaderBack from "./HeaderBack";
 import back from '../images/back.png';
 import { userContext } from "../context/UserDataProvider";
 
+
 const NewCar = () => {
 
-  const {agregarFire} =  React.useContext(userContext);
+  const {agregarFire, message} =  React.useContext(userContext);
+
   /* const saveValue = (e) => {
     console.log(e.target.value); 
    
@@ -27,6 +29,10 @@ const NewCar = () => {
        <h1>¿Deseas un automóvil de reemplazo?</h1>
         </div>
         <div className="containerLogo-C">
+       {message ? (
+                <div className="alert alert-danger">{message}</div>
+              ) : null}
+
         
           <div className= "car-container">
           <img className="logoCoche" src={coche} alt="logo coche" />
@@ -52,9 +58,9 @@ const NewCar = () => {
                 <Link to={`/reset`}>
                 <p
                   type="button"
-                  className="text-center mt-3 conditions"
+                  className="text-center mt-3 conditions mx-auto d-block"
                 >
-                    Acepto los términos y condiciones
+                     Acepto los términos y condiciones
                 </p>
               </Link>
             
