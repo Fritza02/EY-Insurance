@@ -11,29 +11,32 @@ const Policies = () => {
         <section className="policies-container">
             <HeaderHome />
             <div className="policies-title">
-                <h1>Mis pólizas</h1>
+                <h1><strong>Mis pólizas</strong></h1>
             </div>
-            <div className= "card-container">
+            <div className= "card-container mt-3">
             <div className="policy-box text-center">
-                <div className="card mb-3 policy-card">
-                    <div className="row g-0">
-                        <div className="col-md-4 car-image">
-                            <img src={car} className="img-fluid rounded-start mt-4 ms-4" alt="..." />
-                        </div>
+                <div className="card policy-card mt-3">
+                   
                         <div className="col-md-8">
+                        <div className="row g-0 mt-3">
+                        <div className="col-md-3 car-image mx-auto d-block">
+                            <img src={car} className="img-fluid rounded-start mt-4 ms-4 " alt="..." />
+                        </div>
                             <div className="card-body car-info">
                                 {
                                     [auto.auto1].map((item, id) => (
-                                        <h2 key={id}> {item.tipo} {item.marca} {item.patente} </h2>
+                                        <h2 key={id}> <strong> {item.tipo} {item.marca} </strong>{item.patente} </h2>
                                     ))
                                 }
 
                                 {
                                     [poliza.poliza1].map((item, id) => (
                                         <div className= "policy-info" key={id}>
-                                            <p className="card-text policy" > Póliza: {item.codigo} Vigencia: {item.vigencia} </p>
+                                            <p className="card-text policy" > <strong>Póliza: </strong> {item.codigo} <strong>Vigencia:</strong> {item.vigencia} </p>
                                             <p className="card-text payment">
-                                                <p className="text-success h3">{item.estado}</p>
+                                            {item.estado === "Impaga"
+                ? <p className="bg-danger text-white text-center h3"> {item.estado} </p>
+                : <p className="bg-success text-white text-center h3"> {item.estado} </p> }
                                             </p>
                                         </div>
                                         

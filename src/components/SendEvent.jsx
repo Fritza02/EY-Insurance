@@ -3,7 +3,10 @@ import "../styles/newcar.css";
 import check from "../images/check-circle.png";
 import HeaderBack from "./HeaderBack";
 import { Link } from "react-router-dom";
+
 const SendEvent = () => {
+  
+
   return (
     <section className="newCar ">
       <HeaderBack />

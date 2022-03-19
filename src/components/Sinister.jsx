@@ -32,17 +32,17 @@ const Sinister = () => {
      
           <div className="sinister-buttons">
     
-              <button type="sinister-btn" value="choque" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
+              <button type="sinister-btn" value="Choque" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
                 Choque
               </button>
           
         
-              <button type="sinister-btn" value="robo" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
+              <button type="sinister-btn" value="Robo" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
                 Robo
               </button>
        
          
-              <button type="sinister-btn" value="asistencia en ruta" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
+              <button type="sinister-btn" value="Asistencia en ruta" onClick={saveValue} class="btn-h btn btn-dark rounded-pill btn-lg">
                 Asistencia en ruta
               </button>
            

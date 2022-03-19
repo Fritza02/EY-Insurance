@@ -70,21 +70,22 @@ const UpDocuments = () => {
         <img className= "back" src={back} alt="Home icon" />
         </Link>
         </div>
-            <div className= "upload-text text-center">
+            <div className= "upload-text text-center mt-5 ms-3 me-3">
             <h1>Subir Documentos</h1>
             <p>A continuación, adjunta fotografías del incidente y/o los  archivos que sean pertinentes</p>
             </div>
             <div className="col">
-                <div className="mb-3 text-center">
-                    <label htmlFor="formFile" className="form-label">Formatos permitidos: JPG y PDF (3 mb máx.)</label>
+                <div className="mb-3 mt-3 text-center ms-3 me-3">
                     <input className="form-control" type="file" id="formFile" placeholder="Añade archivo" onChange={upPhoto}/>
+                    <label htmlFor="formFile" className="form-label">Formatos permitidos: JPG y PDF (3 mb máx.)</label>
+               
                 </div>
                 <div>
             
-                </div>
+                </div> 
                     
             </div>
-            <button type="button" className="btn btn-primary">Subir imagen</button>
+            <button type="button" class="btn btn-outline-dark d-block mx-auto">Subir imagen</button>
             <div className="continue-btn">
             <Link to = "/newcar">
           <button type="button" class="btn btn-dark next-btn">Siguiente</button>

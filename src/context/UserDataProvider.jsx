@@ -6,9 +6,12 @@ import {
   collection,
 } from "firebase/firestore"
 import { useNavigate } from "react-router-dom";
+import moment from 'moment'
+import 'moment/locale/es' // Pasar a español
 
 import { db } from "../firebase";
 export const userContext = React.createContext();
+
 
 
 
@@ -21,6 +24,8 @@ const UserDataProvider = (props) => {
   const [auto, setAuto] = React.useState([]);
   const [poliza, setPoliza] = React.useState([]);
  const [siniestro, setSiniestro] = React.useState([]);
+ const [message, setMessage] = React.useState("");
+
   
  let navigate = useNavigate();
 
@@ -56,11 +61,23 @@ const UserDataProvider = (props) => {
   const agregarFire = async (e) => {
     e.preventDefault();
     const date = new Date();
+    const day = moment(date).format('D/MMM/YY');
    /*  const day = moment(date).format('D-MMM-YY'); */
-
+   if (carSinister === []) {
+    //console.log("Recuerda registrar los datos");
+    console.log('error')
+    setMessage("Recuerda registrar los datos del auto")
+    return;
+  } else if (typeSinister.length === 0) {
+    console.log('error')
+    setMessage("Selecciona un tipo de siniestro")
+    return;
+  }
+    
     try {
         const docRef = await addDoc(collection(db, 'sinister'),{
             date: date,
+            day: day,
             auto: carSinister,
             uid: uidData,
             estado: "Solicitud ingresada",
@@ -70,9 +87,9 @@ const UserDataProvider = (props) => {
         setError(null)
         console.log('funciona :)')
         navigate("/sendevent");
-
+        setCarSinister([]);
+        setTypeSinister('')
         return docRef
-        
 
     } catch(error){
         console.log(error)
@@ -90,6 +107,7 @@ const UserDataProvider = (props) => {
     agregarFire,
     setTypeSinister,
     setCarSinister,
+    message
     
 
     
